@@ -1,0 +1,74 @@
+<div class="container my-5">
+  <ul class="nav nav-tabs nav-justified" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="justified-tab-0" data-bs-toggle="tab" href="#justified-tabpanel-0" role="tab" aria-controls="justified-tabpanel-0" aria-selected="true"> Iniciar sesión </a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="justified-tab-1" data-bs-toggle="tab" href="#justified-tabpanel-1" role="tab" aria-controls="justified-tabpanel-1" aria-selected="false"> Regístrese </a>
+    </li>
+  </ul>
+  <div class="tab-content pt-3" id="tab-content">
+    
+    <div class="tab-pane active" id="justified-tabpanel-0" role="tabpanel" aria-labelledby="justified-tab-0">
+      
+      <!--INICIAR SESION-->
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="mb-3">
+            <label for="username" class="form-check-label">Nombre de usuario</label>
+            <input type="text" class="form-control" id="username" formControlName="username" >
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="password" formControlName="password">
+        </div>
+        <button type="submit" class="btn btn-primary mx-2">Ingresar</button>
+      </form>
+    </div>
+
+
+    <!--REGISTRO DE USUARIOS-->
+    <div class="tab-pane" id="justified-tabpanel-1" role="tabpanel" aria-labelledby="justified-tab-1">
+      <form (ngSubmit)="register()" > 
+        <div class="mb-3">
+            <label for="" class="form-check-label">Nombre Completo</label>
+            <input type="text" class="form-control" id="">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-check-label">Nombre de usuario</label>
+            <input type="text" class="form-control" id="">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-check-label">Fecha de nacimiento</label>
+            <input type="date" class="form-control" id="">
+        </div>
+        <div class="mb-1">
+            <label for="" class="form-check-label">Tipo de documento: </label>
+        </div>
+        <div class="mb-3">
+            <input class="form-check-input" name="flexRadioDefault" type="radio">
+            <label class="form-check-label me-2" for="">C.C</label>
+            <input class="form-check-input" name="flexRadioDefault" type="radio">
+            <label class="form-check-label" for="" >C.E</label>
+        </div>
+        <div class="mb-3">
+            <label class="form-check-label" for=""> Numero de documento </label>
+            <input type="number" class="form-control" >
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text"></div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-primary mx-2"> Registrarse </button>
+        <button type="button" class="btn btn-primary" routerLink="/inicio"> Volver </button>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,115 @@
+<!--<p>Este componente es para cuando los usuarios se loguean</p>-->
+<app-navbar></app-navbar>
+<!--Tus propiedades-->
+<div class="container" >
+    <div class="container mt-4 d-flex justify-content-between">
+        <div>
+            <h2>Tus propiedades</h2>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary" routerLink="/inmueble">
+                <img src="./assets/add.png" width="30" height="30">
+                Ofrecer Casa
+            </button>
+        </div>
+    </div>
+    <br>    
+    <div class="container" >
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header d-flex">
+                      <div class="dropstart ms-auto">
+                        <button class="btn text-muted" type="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img src="./assets/mas.png" width="20" height="20">
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" routerLink="/editarinmueble">Editar Inmueble</a>
+                            </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <img src="./assets/casitasample.jpg" class="card-img-top"/>
+                    <div class="card-body text-center">
+                      <p class="card-text">
+                      ubicacion,  cupo: 
+                      </p>
+                    </div>
+                    <div class="card-footer d-flex">
+                      <button class="btn btn-primary" routerLink="/inquilinos">Ver Inquilinos</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+              2 of 3
+            </div>
+            <div class="col">
+                3 of 3
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<!--Inquilinato-->
+<div class="container" >
+    <div class="container mt-4 d-flex justify-content-between">
+        <div >
+            <h2>Inquilinato</h2>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary" routerLink="/search">
+                <img src="./assets/search.png" width="30" height="30"> 
+                Buscar casa
+            </button>
+        </div>
+    </div>
+    <br>
+    <div class="container" >
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header d-flex align-items-center">
+                      <div class="dropstart ms-auto">
+                        <button class="btn text-muted" type="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img src="./assets/mas.png" width="20" height="20">
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" routerLink="/editarinmueble">Suscripción</a>
+                            </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <img src="./assets/casitasample.jpg" class="card-img-top"/>
+                    <div class="card-body text-center">
+                      <p class="card-text">
+                      ubicacion,  cupo, estado, prox pago
+                      </p>
+                    </div>
+                    <div class="card-footer d-flex">
+                      <button class="btn btn-primary" href="#">Pagar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+              2 of 3
+            </div>
+            <div class="col">
+                3 of 3
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div *ngFor="let user of usuarios">
+    <p>Nombre: {{ user.nombre }}</p>
+    <p>Usuario: {{ user.username }}</p>
+    <!-- Agrega más campos según sea necesario -->
+    <hr>
+  </div>
+
+
+<app-footer> </app-footer>

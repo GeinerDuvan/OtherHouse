@@ -1,0 +1,20 @@
+p,ul {
+  border: 2px solid rebeccapurple;
+  padding: .5em;
+}
+
+.block,li {
+  border: 2px ;
+  padding: .5em;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+.block {
+  display: block;
+  max-width: 50%; /* Establece el ancho máximo del bloque */
+  margin: auto;
+}
