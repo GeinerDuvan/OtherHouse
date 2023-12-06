@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="input-group rounded mt-3">
+        <input type="search" class="form-control rounded" name="filterCasa" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" [(ngModel)]="filterCasa">
+        <button type="button" class="btn btn-outline-primary" routerLink="/search">Buscar</button>
+    </div>
+    <div class="row">
+        <div class="col">
+          <table class="table table-striped">
+            <tbody>
+              <tr *ngFor="let casa of casas">
+                <a class="block">
+                    <ul>
+                    <li>
+                        <div class="col col-sm">
+                            <img src="{{ casa.imagen }}" width=300 height=200 class="img-fluid rounded mx-auto d-block imagen_producto" alt="Sin Imágen">
+                        </div>
+                    </li>
+                    <li>
+                        <table class="table">
+                        <tbody>
+                        <tr>
+                            <th scope="row">Dirección</th>
+                            <td>{{ casa.direccion}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Numero Baños</th>
+                            <td>{{ casa.num_banos }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tamaño</th>
+                            <td>{{ casa.tamano }}</td>
+                        </tr>
+                        <tr>
+                        <button type="button" class="btn btn-primary mx-2" routerLink="/informacion"> Detalles </button></tr>
+                        </tbody>
+                        </table>
+                    </li>
+                    </ul>
+                </a>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
+<!--Esta es la pagina de busquedas, imprime una lista de HouseComponents por ngFor-->
