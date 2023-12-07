@@ -23,30 +23,14 @@ import { InquilinocomponentComponent } from './inquilinocomponent/inquilinocompo
 import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    HomeComponent,
-    LoginComponent,
-    SearchComponent,
-    FooterComponent,
-    LandingComponent,
-    SearchbarComponent,
-    InmuebleregComponent,
-    EditprofileComponent,
-    EditinmuebleComponent,
-    InfohouseComponent,
-    HousecomponentComponent,
-    InquilinosComponent,
-    InquilinocomponentComponent,
-    FilterPipe
+  declarations: [ AppComponent, NavbarComponent, HomeComponent, LoginComponent, SearchComponent, 
+    FooterComponent, LandingComponent, SearchbarComponent, InmuebleregComponent,
+    EditprofileComponent, EditinmuebleComponent, InfohouseComponent, HousecomponentComponent, InquilinosComponent,
+    InquilinocomponentComponent, FilterPipe
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    FormsModule
+    BrowserModule, AppRoutingModule,
+    HttpClientModule, ReactiveFormsModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

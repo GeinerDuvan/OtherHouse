@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { UsuariosService } from '../servicios/usuarios.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import {ToastrService} from "ngx-toastr"
 
 import { dataService } from '../dataservice/data.service';
 import { Usuarios } from '../dataservice/usuarios';
@@ -16,7 +15,7 @@ export class LoginComponent {
 
   loginForm: FormGroup;
   registerForm: FormGroup;
-  constructor(private formBuilder: FormBuilder,private toastr: ToastrService, private router:Router){
+  constructor(private formBuilder: FormBuilder, private router:Router){
     
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
@@ -63,5 +62,3 @@ export class LoginComponent {
     }
     }
 
-
-}

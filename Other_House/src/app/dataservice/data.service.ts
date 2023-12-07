@@ -11,11 +11,9 @@ export class dataService{
     constructor(private http: HttpClient){}
 
     getAll(){
-        return this.http.get(this.userUrl);
-    }
+        return this.http.get(this.userUrl);}
     getById(id:any){
-        return this.http.get(this.userUrl+"/"+id);
-    }
+        return this.http.get(this.userUrl+"/"+id);}
 
     register(inputdata:Usuarios): Observable<any>{
         return this.http.post(this.userUrl, inputdata);
