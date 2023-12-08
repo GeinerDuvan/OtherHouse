@@ -1,19 +1,19 @@
 <!--<p>Este componente es para cuando los usuarios se loguean</p>-->
 <app-navbar></app-navbar>
 <!--Tus propiedades-->
-<div class="container" >
-    <div class="container mt-4 d-flex justify-content-between">
+<div class="container mt-3 py-3 px-3" style="background-color: rgb(225, 240, 250); border-radius: 20px;" >
+    <div class="container mt-1 d-flex justify-content-between">
         <div>
             <h2>Tus propiedades</h2>
         </div>
         <div>
-            <button type="button" class="btn btn-primary" routerLink="/inmueble">
+            <button type="button" class="btn btn-secondary" routerLink="/inmueble">
                 <img src="./assets/add.png" width="30" height="30">
                 Ofrecer Casa
             </button>
         </div>
     </div>
-    <br>    
+    <hr>    
     <div class="container" >
         <div class="row">
             <div class="col">
@@ -33,12 +33,15 @@
                     <img src="./assets/casitasample.jpg" class="card-img-top"/>
                     <div class="card-body text-center">
                       <p class="card-text">
-                      ubicacion,  cupo: 
-                      </p>
-                    </div>
-                    <div class="card-footer d-flex">
-                      <button class="btn btn-primary" routerLink="/inquilinos">Ver Inquilinos</button>
-                    </div>
+                        Ubicacion: Calle 22 # 45 -2
+                        </p>
+                        <p>
+                          Cupo: 3/3
+                        </p>
+                      </div>
+                      <div class="card-footer d-flex justify-content-center">
+                        <button class="btn btn-primary" routerLink="/inquilinos">Ver Inquilinos</button>
+                      </div>
                 </div>
             </div>
             <div class="col">
@@ -53,19 +56,19 @@
 
 <br>
 <!--Inquilinato-->
-<div class="container" >
-    <div class="container mt-4 d-flex justify-content-between">
+<div class="container py-3 px-3" style="background-color: rgb(225, 240, 250); border-radius: 20px;" >
+    <div class="container mt-1 d-flex justify-content-between">
         <div >
             <h2>Inquilinato</h2>
         </div>
         <div>
-            <button type="button" class="btn btn-primary" routerLink="/search">
+            <button type="button" class="btn btn-secondary" routerLink="/search">
                 <img src="./assets/search.png" width="30" height="30"> 
                 Buscar casa
             </button>
         </div>
     </div>
-    <br>
+    <hr>
     <div class="container" >
         <div class="row">
             <div class="col">
@@ -77,19 +80,28 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" routerLink="/editarinmueble">Suscripción</a>
+                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Suscripción</a>
                             </li>
                         </ul>
                       </div>
                     </div>
-                    <img src="./assets/casitasample.jpg" class="card-img-top"/>
+                    <img src="https://cdn.pixabay.com/photo/2016/06/24/10/47/house-1477041_1280.jpg" class="card-img-top"/>
                     <div class="card-body text-center">
                       <p class="card-text">
-                      ubicacion,  cupo, estado, prox pago
+                      Ubicacion: Calle 22 # 45 -2
+                      </p>
+                      <p>
+                        Cupo: 3/3
+                      </p>
+                      <p>
+                        Estado: Al día
+                      </p>
+                      <p>
+                        Próximo pago: 12/12/23
                       </p>
                     </div>
-                    <div class="card-footer d-flex">
-                      <button class="btn btn-primary" href="#">Pagar</button>
+                    <div class="card-footer d-flex justify-content-center">
+                      <button class="btn btn-primary" href="/home">Pagar</button>
                     </div>
                 </div>
             </div>
@@ -104,12 +116,36 @@
 </div>
 
 
-<div *ngFor="let user of usuarios">
-    <p>Nombre: {{ user.nombre }}</p>
-    <p>Usuario: {{ user.username }}</p>
-    <!-- Agrega más campos según sea necesario -->
-    <hr>
+<!--Modal de suscripción-->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+ data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">¿Está seguro que quiere pausar o terminar su suscripción</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Recuerde que para pausar o terminar su suscripción debe estár al día con sus pagos.
+        </p> 
+        <p>
+          Si decide suspender temporalmente su membresía en el hogar, se tomará esta fecha 
+          como su nueva fecha para los próximos años.
+        </p>
+        <p>
+          Ambas condiciones serán notificadas al dueño       
+          del inmueble ¡Vuelve pronto!
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary">Suspender suscripción</button>
+        <button type="button" class="btn btn-secondary">Terminar contrato</button>
+      </div>
+    </div>
   </div>
+</div>
+
 
 
 <app-footer> </app-footer>

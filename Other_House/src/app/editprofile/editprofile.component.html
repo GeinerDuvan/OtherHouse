@@ -1,1 +1,52 @@
-<p>editprofile works!</p>
+<app-navbar></app-navbar>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Editar Perfil</h2>
+    <form>
+        <div class="text-center mb-3">
+            <div class="position-relative">
+              <img src="/.assets/perfil.png" alt="Foto de Perfil" class="img-fluid" id="profileImage" style="width: 150px; height: 150px;">
+              <label for="inputPhoto" class="btn btn-primary btn-sm position-absolute bottom-0 start-50 translate-middle-x">
+                Subir Foto 
+                <input type="file" class="visually-hidden" id="inputPhoto" accept="image/*">
+              </label>
+            </div>
+          </div>
+      <div class="mb-3">
+        <label for="inputRealName" class="form-label">Nombre completo</label>
+        <input type="text" class="form-control" id="inputRealName" placeholder="Nombre completo">
+      </div>
+      <div class="mb-3">
+        <label for="inputUsername" class="form-label">Nombre de Usuario</label>
+        <input type="text" class="form-control" id="inputUsername" placeholder="Nombre de usuario">
+      </div>
+      <div class="mb-3">
+        <label for="inputDocumentType" class="form-label">Tipo de Documento</label>
+        <select class="form-select" id="inputDocumentType">
+          <option>Cédula de Ciudadanía</option>
+          <option>Pasaporte</option>
+          <!-- Agregar más tipos de documento si es necesario -->
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="inputPhone" class="form-label">Número de Celular</label>
+        <input type="tel" class="form-control" id="inputPhone" placeholder="Número de celular">
+      </div>
+      <div class="mb-3">
+        <label for="inputPassword" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
+      </div>
+      <div class="mb-3">
+        <label for="inputBirthdate" class="form-label">Fecha de Nacimiento</label>
+        <input type="date" class="form-control" id="inputBirthdate">
+      </div>
+      <div class="mb-3">
+        <label for="inputEmail" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Correo electrónico">
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+      <button type="submit" class="btn btn-outline-primary mx-3">Cancelar Cambios</button>
+    </form>
+</div>
+
+<app-footer></app-footer>
+  

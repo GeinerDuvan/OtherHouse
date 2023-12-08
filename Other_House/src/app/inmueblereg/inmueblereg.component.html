@@ -1,1 +1,66 @@
-<p>inmueblereg works!</p>
+<div class="container my-4 py-3 " style="background-color: rgb(204, 226, 240); border-radius: 20px;">
+  <h2 class="text-center mb-3">Registro de Inmueble</h2>
+  <hr>
+  <form>
+    <div class="mb-3">
+      <label for="inputImage" class="form-label">Imagen</label>
+      <input type="text" class="form-control" id="inputImage" placeholder="URL de la imagen">
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="inputSize" class="form-label">Tamaño</label>
+          <input type="text" class="form-control" id="inputSize" placeholder="Tamaño del inmueble">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="inputBathrooms" class="form-label">Cantidad de Baños</label>
+          <input type="number" class="form-control" id="inputBathrooms" placeholder="Cantidad de baños">
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="basicServices" class="form-label">Servicios Básicos</label>
+      <select class="form-select" id="basicServices">
+        <option>Agua</option>
+        <option>Luz</option>
+        <option>Internet</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="additionalServices" class="form-label">Servicios Adicionales (opcional)</label>
+      <textarea class="form-control" id="additionalServices" rows="3" placeholder="Descripción de servicios adicionales"></textarea>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="mb-3">
+          <label for="inputCapacity" class="form-label">Cupos</label>
+          <input type="number" class="form-control" id="inputCapacity" placeholder="Cantidad de cupos">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="mb-3">
+          <label for="inputBasePrice" class="form-label">Precio Base</label>
+          <input type="number" class="form-control" id="inputBasePrice" placeholder="Precio base">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="mb-3">
+          <label for="inputAdditionalPrice" class="form-label">Precio Adicional</label>
+          <input type="number" class="form-control" id="inputAdditionalPrice" placeholder="Precio adicional">
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="inputLocation" class="form-label">Ubicación</label>
+      <input type="text" class="form-control" id="inputLocation" placeholder="Ubicación del inmueble">
+    </div>
+    <div class="mb-3">
+      <label for="inputDescription" class="form-label">Descripción</label>
+      <textarea class="form-control" id="inputDescription" rows="5" placeholder="Descripción del inmueble"></textarea>
+    </div>
+    <button type="submit" class="btn btn-secondary">Registrar Inmueble</button>
+    <button type="submit"  routerLink="/home" class="btn btn-outline-secondary mx-3">Cancelar Registro</button>
+  </form>
+</div>

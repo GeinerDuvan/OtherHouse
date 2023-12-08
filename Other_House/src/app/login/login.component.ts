@@ -3,8 +3,7 @@ import { UsuariosService } from '../servicios/usuarios.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { dataService } from '../dataservice/data.service';
-import { Usuarios } from '../dataservice/usuarios';
+
 
 @Component({
   selector: 'app-login',
@@ -15,7 +14,8 @@ export class LoginComponent {
 
   loginForm: FormGroup;
   registerForm: FormGroup;
-  constructor(private formBuilder: FormBuilder, private router:Router){
+
+  constructor(private formBuilder: FormBuilder, private usuarioServicio: UsuariosService, private router:Router){
     
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
@@ -53,12 +53,23 @@ export class LoginComponent {
     }
 
 
-    registrarUsuario() {
-      if(this.registerForm){
+    register(){
+      if (this.registerForm.valid){
+        const userData = this.registerForm.value;
 
-      }else{
-        
+        this.usuarioServicio.register(userData).subscribe(
+          (response)=>{
+            console.log('Registro exitoso', response);
+
+            this.router.navigate(['/home']);
+          },
+          (error) =>{
+            console.error('Error en el registro', error);
+          }
+          
+        );
       }
     }
-    }
 
+
+}

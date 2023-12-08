@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,17 +19,31 @@ import { InfohouseComponent } from './infohouse/infohouse.component';
 import { HousecomponentComponent } from './housecomponent/housecomponent.component';
 import { InquilinosComponent } from './inquilinos/inquilinos.component';
 import { InquilinocomponentComponent } from './inquilinocomponent/inquilinocomponent.component';
-import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
-  declarations: [ AppComponent, NavbarComponent, HomeComponent, LoginComponent, SearchComponent, 
-    FooterComponent, LandingComponent, SearchbarComponent, InmuebleregComponent,
-    EditprofileComponent, EditinmuebleComponent, InfohouseComponent, HousecomponentComponent, InquilinosComponent,
-    InquilinocomponentComponent, FilterPipe
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HomeComponent,
+    LoginComponent,
+    SearchComponent,
+    FooterComponent,
+    LandingComponent,
+    SearchbarComponent,
+    InmuebleregComponent,
+    EditprofileComponent,
+    EditinmuebleComponent,
+    InfohouseComponent,
+    HousecomponentComponent,
+    InquilinosComponent,
+    InquilinocomponentComponent
   ],
   imports: [
-    BrowserModule, AppRoutingModule,
-    HttpClientModule, ReactiveFormsModule, FormsModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
